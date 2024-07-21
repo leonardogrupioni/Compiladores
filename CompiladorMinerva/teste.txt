@@ -1,0 +1,26 @@
+procedimento fatorial(int numero);
+
+procedimento principal(){
+	int resultado;
+	int numero;
+	leia(numero);
+	resultado <- fatorial(numero);
+	se (resultado = -1) entao {
+		imprima("erro");
+        }senao {
+		imprima(resultado);
+	}
+}
+
+procedimento fatorial(int numero){
+	int resultado <- 1;
+	int i;
+	se (numero < 0) entao{
+		resultado <- -1;
+	} senao se (numero > 0) entao {
+		para i de numero ate 1 passo -1 faca {
+			resultado <- resultado * i;
+                }
+	}
+}
+
